@@ -1,11 +1,10 @@
 package com.company;
- public class Lenovo extends Notebook {
+ public final class Lenovo extends Notebook {
 
     private String newFunction1;
     private String newFunction2;
 
     public Lenovo(int HDD, int SSD, String name, Color color, CountryOfOrigin countryOfOrigin, String newFunction1, String newFunction2) {
-        super(HDD, SSD, name, color, countryOfOrigin);
         this.newFunction1 = newFunction1;
         this.newFunction2 = newFunction2;
     }
@@ -23,7 +22,8 @@ package com.company;
     }
 
      @Override
-     public void getInfo(String name, int HDD, int SSD, Color color, CountryOfOrigin countryOfOrigin) {
+     public void getInfo(String name, int HDD, int SSD, Color color,  CountryOfOrigin countryOfOrigin) {
          super.getInfo(name, HDD, SSD, color, countryOfOrigin);
-     }
+
+       }
  }

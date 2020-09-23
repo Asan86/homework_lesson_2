@@ -1,8 +1,8 @@
 package com.company;
 
 public class Computer {
-    private int HDD;
-    private int SSD;
+    private  int HDD;
+    private  int SSD;
 
 
     Computer(int HDD, int SSD) {

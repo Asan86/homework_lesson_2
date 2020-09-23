@@ -6,8 +6,7 @@ public class Notebook extends Computer {
     private CountryOfOrigin countryOfOrigin;
 
 
-    public Notebook(int HDD, int SSD, String name, Color color, CountryOfOrigin countryOfOrigin) {
-        super(HDD, SSD);
+    public Notebook(CountryOfOrigin countryOfOrigin) {
         this.name = name;
         this.color = color;
         this.countryOfOrigin = countryOfOrigin;
@@ -29,16 +28,20 @@ public class Notebook extends Computer {
         return countryOfOrigin;
     }
 
-    void getInfo() {
-        System.out.println("Без параметров");
+    final void getInfo(String name) {
+
+        System.out.println("Бренд: " + name);
     }
 
     public void getInfo(int HDD, int SSD, Color color) {
-        System.out.println("3 параметра" + HDD  + SSD + color);
+
+        System.out.println("HDD: " + HDD + "гб.\n" + "SSD: " + SSD + "гб.\n" + "Цвет: " + color + "\n");
     }
 
-    public void getInfo(String name, int HDD, int SSD,  Color color, CountryOfOrigin countryOfOrigin) {
-        System.out.println(name + HDD + SSD + color + countryOfOrigin);
+    public void getInfo(String name, int HDD, int SSD, Color color, CountryOfOrigin countryOfOrigin) {
+        System.out.println("\nБренд: " + name + "\nHDD: " + HDD + "гб.\n" + "SSD: " + SSD + "гб.\n"
+                        + "цвет: " + color +
+                "\nСтрана производства: " + countryOfOrigin.getNameСountry() + "\nГород: " + countryOfOrigin.getNamTown());
     }
 }
 
